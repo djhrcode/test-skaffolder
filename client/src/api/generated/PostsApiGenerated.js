@@ -26,6 +26,84 @@ class PostsApiGenerated {
 
   // CRUD METHODS
 
+  /**
+  * PostsService.create
+  *   @description CRUD ACTION create
+  *
+  */
+  static createPosts(posts) {
+    return axios.post(PostsApiGenerated.contextUrl, posts )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * PostsService.delete
+  *   @description CRUD ACTION delete
+  *   @param ObjectId id Id
+  *
+  */
+  static deletePosts(id) {
+    return axios.delete(PostsApiGenerated.contextUrl + "/" + id)
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * PostsService.get
+  *   @description CRUD ACTION get
+  *   @param ObjectId id Id resource
+  *
+  */
+  static getOnePosts(id) {
+    return axios.get(PostsApiGenerated.contextUrl + "/" + id)
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * PostsService.list
+  *   @description CRUD ACTION list
+  *
+  */
+  static getPostsList() {
+    return axios.get(PostsApiGenerated.contextUrl)
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * PostsService.update
+  *   @description CRUD ACTION update
+  *   @param ObjectId id Id
+  *
+  */
+  static savePosts(posts) {
+    return axios.post(PostsApiGenerated.contextUrl + "/" + posts._id, posts )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
 
 
     // Custom APIs

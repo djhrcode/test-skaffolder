@@ -58,6 +58,14 @@ const generatedModel = {
       
       // EXTERNAL RELATIONS
       /*
+      id_user: {
+        type: Schema.ObjectId,
+        ref: "Posts"
+      },
+      user_id: {
+        type: Schema.ObjectId,
+        ref: "Adresses"
+      },
       */
     });
 

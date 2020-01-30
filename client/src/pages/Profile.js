@@ -22,11 +22,6 @@ import SecurityService from "../security/SecurityService";
 
 /** APIs
 
-* UserService.changePassword
-*	@description Change password of user from admin
-*	@returns object
-*
-
 **/
 
 class Profile extends Component {

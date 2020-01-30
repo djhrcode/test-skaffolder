@@ -23,6 +23,100 @@ let actionsFunction = {
 
   //CRUD METHODS
 
+  // Create posts
+  createPosts: function(posts) {
+    return function(dispatch) {
+      return PostsApi
+        .createPosts(posts)
+        .then(posts => {
+          dispatch(actionsFunction.createPostsSuccess(posts));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  createPostsSuccess: function(posts) {
+    return { type: types.CREATE_POSTS_SUCCESS, payload: posts };
+  },
+
+
+  // Delete posts
+  deletePosts: function(id) {
+    return function(dispatch) {
+      return PostsApi
+        .deletePosts(id)
+        .then(posts => {
+          dispatch(actionsFunction.deletePostsSuccess(posts));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  deletePostsSuccess: function(posts) {
+    return { type: types.DELETE_POSTS_SUCCESS, payload: posts };
+  },
+
+
+  // Get posts
+  loadPosts: function(id) {
+    return function(dispatch) {
+      return PostsApi
+        .getOnePosts(id)
+        .then(posts => {
+          dispatch(actionsFunction.loadPostsSuccess(posts));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  loadPostsSuccess: function(posts) {
+    return { type: types.GET_POSTS_SUCCESS, payload: posts };
+  },
+
+  // Load  list
+  loadPostsList: function() {
+    return function(dispatch) {
+      return PostsApi
+        .getPostsList()
+        .then(list => {
+          dispatch(actionsFunction.loadPostsListSuccess(list));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  loadPostsListSuccess: function(list) {
+    return { type: types.LIST_POSTS_SUCCESS, payload: list };
+  },
+
+	
+  // Save posts
+  savePosts: function(posts) {
+    return function(dispatch) {
+      return PostsApi
+        .savePosts(posts)
+        .then(posts => {
+          dispatch(actionsFunction.savePostsSuccess(posts));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  savePostsSuccess: function(posts) {
+    return { type: types.UPDATE_POSTS_SUCCESS, payload: posts };
+  },
+
+
 };
 
 export default actionsFunction;

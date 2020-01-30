@@ -2,6 +2,11 @@ import { combineReducers } from "redux";
 
 // START IMPORT REDUCERS
 import HomeReducer from "./HomeReducer";
+import PostsReducer from "./PostsReducer";
+import PostsEditReducer from "./PostsEditReducer";
+import PostsListReducer from "./PostsListReducer";
+import ProductsReducer from "./ProductsReducer";
+import ProfileReducer from "./ProfileReducer";
 
 // END IMPORT REDUCERS
 
@@ -22,6 +27,11 @@ const rootReducer = combineReducers({
 
   // START COMBINE REDUCERS
 	HomeReducer,
+	PostsReducer,
+	PostsEditReducer,
+	PostsListReducer,
+	ProductsReducer,
+	ProfileReducer,
  // END COMBINE REDUCERS
 
 });

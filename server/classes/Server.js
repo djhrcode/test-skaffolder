@@ -27,6 +27,7 @@ import SecurityController from "../controllers/SecurityController";
 import Database_Labo_db from "./Database_Labo_db.js";
 
 // Controllers
+import AdressesController from "../controllers/Labo_db/AdressesController";
 import PostsController from "../controllers/Labo_db/PostsController";
 import UserController from "../controllers/Labo_db/UserController";
 
@@ -109,6 +110,7 @@ class Server {
     SecurityController.init(router);
 
     // Start Init Controllers
+		AdressesController.init(router);
 		PostsController.init(router);
 		UserController.init(router);
 		 // End Init Controllers
