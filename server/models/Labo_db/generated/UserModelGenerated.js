@@ -64,7 +64,7 @@ const generatedModel = {
       },
       user_id: {
         type: Schema.ObjectId,
-        ref: "Adresses"
+        ref: "Address"
       },
       */
     });

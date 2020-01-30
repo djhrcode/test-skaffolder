@@ -78,7 +78,7 @@ paths:
           description: OK
                 
 
-  #-----  Adresses  -----
+  #-----  Address  -----
   #-----  Posts  -----
   /posts/:
     post:
@@ -437,24 +437,24 @@ components:
   schemas:
         
 
-    Adresses:
-      x-skaffolder-id: 5e332cf0486dba413b7b3de6
+    Address:
+      x-skaffolder-id: 5e33344c0e3805651222d40b
       x-skaffolder-id-db: 5e31b4098b307f16078dd1ce
-      x-skaffolder-id-entity: 5e332cef486dba413b7b3de3
-      x-skaffolder-url: /adresses
+      x-skaffolder-id-entity: 5e33344c0e3805651222d408
+      x-skaffolder-url: /address
       properties:
         _id:
           type: string
           x-skaffolder-required: true
         address:
           type: string
-          x-skaffolder-id-attr: 5e332cef486dba413b7b3de4
+          x-skaffolder-id-attr: 5e33344c0e3805651222d409
           x-skaffolder-type: String
           x-skaffolder-required: true
       x-skaffolder-relations: 
         user_id:
           x-skaffolder-type: 1:m
-          x-skaffolder-ent1: 5e332cef486dba413b7b3de3
+          x-skaffolder-ent1: 5e33344c0e3805651222d408
           x-skaffolder-ent2: 5e31b4098b307f16078dd1cf
       required:
         - _id

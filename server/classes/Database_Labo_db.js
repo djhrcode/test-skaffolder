@@ -7,7 +7,7 @@ import properties from "../properties.js";
 
 // Start Import Models
 
-import AdressesModel from "../models/Labo_db/AdressesModel";
+import AddressModel from "../models/Labo_db/AddressModel";
 import PostsModel from "../models/Labo_db/PostsModel";
 import UserModel from "../models/Labo_db/UserModel";
 
@@ -25,7 +25,7 @@ class Database {
 
     // Start Init Models
 
-		AdressesModel.init();
+		AddressModel.init();
 		PostsModel.init();
 		UserModel.init();
  // End Init Models
